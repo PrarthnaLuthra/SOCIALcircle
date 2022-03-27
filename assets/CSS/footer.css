@@ -1,0 +1,27 @@
+body {
+  margin-bottom: 0px;
+  color: #0a0808; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  color: azure;
+  height: 10vh;
+  background-image: linear-gradient(to right, #1f1236, #3f013f);
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; }
+  footer p {
+    align-self: center; }
+  footer ul {
+    list-style-type: none; }
+    footer ul li {
+      display: inline;
+      margin: 50px 10px;
+      font-size: medium;
+      font-weight: 400; }
+      footer ul li a {
+        color: beige;
+        text-decoration: none; }

@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    
+}
+
+  
+   
+    form{
+        
+        display: flex;
+        flex-direction: column;
+        margin-left: 30vw;
+        border-radius: 20px;
+        width: 40vw;
+        background-image: linear-gradient(to right , blue ,pink);
+        justify-content: space-around;
+        
+
+        input{
+            
+            margin: 20px;
+            border: 0vh;
+            margin: 20px;
+            height: 5vh;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+
+        }
+        button{
+            width: 100px;
+            align-self: center;
+            margin-bottom: 5vh;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            background-image: linear-gradient(to left, rgb(33, 197, 197), rgb(15, 187, 130), white);
+
+
+        }
+    }

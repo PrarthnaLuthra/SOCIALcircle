@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    
+    background-image: linear-gradient(to right ,rgb(71, 30, 71),rgb(21, 8, 99), rgb(138, 21, 206));
+    justify-content: space-between;
+    h1{
+        margin-left: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+        
+
+    }
+    ul{
+       
+        list-style-type: none;
+        
+        li{
+            display: inline;
+            margin: 50px 10px;
+            font-size: large;
+            font-weight: 400;
+
+            a{
+                color: beige;
+                text-decoration: none;
+            }
+        }
+    }
+}
