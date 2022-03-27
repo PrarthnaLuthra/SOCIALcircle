@@ -1,3 +1,4 @@
+const { response } = require('express');
 const User = require('../models/user');
 
 
@@ -10,14 +11,14 @@ module.exports.profile =function(req,res){
 //render the sign up page
 module.exports.signUp= function(req, res){
     return res.render('user_sign_up',{
-        title: 'CHATTERbox|SignUp'
+        title: 'SOCIALcircle|SignUp'
     });
 }
 
 //render the sign in page
 module.exports.signIn= function(req, res){
     return res.render('user_sign_in',{
-        title: 'CHATTERbox|SignIn'
+        title: 'SOCIALcircle|SignIn'
     });
 }
 //get the sign up data
@@ -42,6 +43,6 @@ module.exports.create = function(req, res){
     });
 }
 //create sign in AND session user
-module.exports.createSession =function(req,res){
-    
+module.exports.createSession = function(req, res){
+  return res.redirect('/use');
 }
