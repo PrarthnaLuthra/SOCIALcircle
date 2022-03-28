@@ -17,18 +17,16 @@ section form input {
 
 section div ul {
   list-style-type: none; }
-  section div ul li {
-    display: inline-block; }
-    section div ul li p {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      height: auto;
-      width: 40vw;
-      background-image: linear-gradient(to right, #a0c9da, #f1c6fc); }
-      section div ul li p small {
-        color: gray; }
-        section div ul li p small a i {
-          color: #280549;
-          right: 0;
-          transform: translateX(36vw); }
+  section div ul li p {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    width: 40vw;
+    background-image: linear-gradient(to right, #a0c9da, #f1c6fc); }
+    section div ul li p small {
+      color: gray; }
+      section div ul li p small a i {
+        color: #280549;
+        right: 0;
+        transform: translateX(36vw); }
