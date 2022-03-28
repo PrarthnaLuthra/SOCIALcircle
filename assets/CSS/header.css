@@ -2,6 +2,9 @@ header {
   display: flex;
   flex-direction: row;
   color: white;
+  position: sticky;
+  width: 100%;
+  top: 0;
   background-image: linear-gradient(to right, #471e47, #150863, #8a15ce);
   justify-content: space-between; }
   header h1 {

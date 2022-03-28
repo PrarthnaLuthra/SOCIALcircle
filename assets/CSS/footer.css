@@ -9,7 +9,7 @@ footer {
   height: 10vh;
   background-image: linear-gradient(to right, #1f1236, #3f013f);
   justify-content: space-between;
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
   height: 60px; }
