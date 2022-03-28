@@ -26,3 +26,7 @@ section div ul {
     background-image: linear-gradient(to right, #a0c9da, #f1c6fc); }
     section div ul li p small {
       color: gray; }
+      section div ul li p small a i {
+        color: #280549;
+        right: 0;
+        transform: translateX(36vw); }

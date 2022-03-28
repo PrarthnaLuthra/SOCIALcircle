@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="/css/home.css" />
 <h1><%= title %></h1>
 
@@ -21,10 +22,20 @@
 
       <li>
         <p>
+          
           <%= post.content %>
 
           <small> <%= post.user.name %> </small>
+          <% if(locals.user && locals.user.id == post.user.id){%>
+
+            <small>
+              <a href="/posts/destroy/<%= post.id%>"><i class="fa-solid fa-delete-left"></i></a>
+            </small>
+
+          <%}%>
+        
         </p>
+
         <div class="PostComments"><%if(locals.user){%> 
             <form action="/comments/create" method="POST">
                 <input type="text" name="content" id="Type here to add comment....." required>
