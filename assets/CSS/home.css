@@ -1,0 +1,28 @@
+section h4 {
+  color: #240079; }
+
+section form textarea {
+  align-self: center;
+  background-image: linear-gradient(to right, white, #ebebfa, #4ffaec);
+  border-bottom-right-radius: 20px;
+  border: none;
+  border-bottom: 3px solid cornflowerblue;
+  border-right: 2px solid #006363; }
+
+section form input {
+  background-image: linear-gradient(to right, #bf16f3, #f1c6fc);
+  color: white;
+  border: 0px;
+  border-radius: 10px; }
+
+section div ul {
+  list-style-type: none; }
+  section div ul li p {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    width: 40vw;
+    background-image: linear-gradient(to right, #a0c9da, #f1c6fc); }
+    section div ul li p small {
+      color: gray; }

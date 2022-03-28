@@ -10,7 +10,7 @@ const passport = require('passport')
 const passportLocal =require('./config/passport-local-strategy')
 const bodyParser = require("body-parser");
 // const mongoose = require("mongoose");
-// const MongoStore = require('connect-mongo')(session);//to session information into the database
+const MongoStore = require('connect-mongo')(session);//to session information into the database
 const sassMiddleware=require('node-sass-middleware')
 
 app.use(sassMiddleware({
@@ -47,17 +47,17 @@ app.use(session({
     },
    
 
-    // store: new MongoStore(
-    //     {
+    store: new MongoStore(
+        {
             
-    //         mongooseConnection: db,
-    //         autoRemove: 'disabled'
+            mongooseConnection: db,
+            autoRemove: 'disabled'
         
-    //     },
-    //     function(err){
-    //         console.log(err ||  'connect-mongodb setup ok');
-    //     }
-    // )
+        },
+        function(err){
+            console.log(err ||  'connect-mongodb setup ok');
+        }
+    )
 
 }))
 
