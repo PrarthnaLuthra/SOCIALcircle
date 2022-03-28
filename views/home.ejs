@@ -1,35 +1,41 @@
-<link rel="stylesheet" href="/css/home.css">
-<h1>
-    <%= title %>
-</h1>
+<link rel="stylesheet" href="/css/home.css" />
+<h1><%= title %></h1>
 
 <section id="feed-posts">
-    <h4>Posts</h4>
-    <%if(locals.user){%>
-    <form action="/posts/create" id="new-post-form" method="POST">
-        <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
-        <input type="submit" value="Post">
-    </form><%}%>
+  <h4>Posts</h4>
+  <%if(locals.user){%>
+  <form action="/posts/create" id="new-post-form" method="POST">
+    <textarea
+      name="content"
+      cols="30"
+      rows="3"
+      placeholder="Type Here..."
+    ></textarea>
+    <input type="submit" value="Post" />
+  </form>
+  <%}%>
 
-    <div id="posts-list-container">
-        <ul>
-            <% for(post of posts){ %>
-                
-            <li>
-               <p>
-                   
-                    <%= post.content %>
-                
-                   
-                    <small>
-                        <%= post.user.name %>
-                    </small>
-                </p>
-              
-                
-            </li>
-                
-            <%} %>
-        </ul>
-    </div>
+  <div id="posts-list-container">
+    <ul>
+      <% for(post of posts){ %>
+
+      <li>
+        <p>
+          <%= post.content %>
+
+          <small> <%= post.user.name %> </small>
+        </p>
+        <div class="PostComments"><%if(locals.user){%> 
+            <form action="/comments/create" method="POST">
+                <input type="text" name="content" id="Type here to add comment.....">
+                <input type="hidden" name="post" value="<%= post._id%>">
+                <input type="submit" value="Add Comment">
+            </form>
+            <%}%>
+        </div>
+      </li>
+
+      <%} %>
+    </ul>
+  </div>
 </section>
