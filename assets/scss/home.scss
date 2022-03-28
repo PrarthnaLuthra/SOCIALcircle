@@ -26,9 +26,12 @@ section{
 
     }
     div{
+        
+        
         ul{
             list-style-type: none;
             li{
+                display: inline-block;
                 p{
                     display: flex;
                     justify-content: space-between;
@@ -51,5 +54,7 @@ section{
                 }
             }
         }
+
     }
+
 }
