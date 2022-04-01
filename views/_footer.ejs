@@ -1,19 +1,14 @@
 <footer>
-    <p>
-    ©Prarthna Luthra. All Rights Reserved
-</p>
-<ul>
+  <p>©Prarthna Luthra. All Rights Reserved</p>
+  <ul>
+    <% if (locals.user){ %>
     <li>
-        <a href="/">
-            Home
-
-        </a>
+      <a href="/"> Home </a>
     </li>
     <li>
-        <a href="/users/profile">
-            Profile
-
-        </a>
+      <a href="/users/profile/<%= user.id%>">Profile</a>
     </li>
-</ul>
+
+    <% } %>
+  </ul>
 </footer>
