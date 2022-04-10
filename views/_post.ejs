@@ -6,12 +6,29 @@
     <% if(locals.user && locals.user.id == post.user.id){%>
 
     <small>
-      <a class="delete-post-button"href="/posts/destroy/<%= post.id%>"
+      <a class="delete-post-button" href="/posts/destroy/<%= post.id%>"
         ><i class="fa-solid fa-delete-left"></i
       ></a>
     </small>
 
     <%}%>
+
+    <br />
+    <small>
+      <%if(locals.user){%>
+      <a
+        class="toggle-like-button"
+        data-likes="<%=post.likes.length%>"
+        href="/likes/toggle/?id=<%=post._id%>&type=Post"
+      >
+        <i style="color: red" class="fa-solid fa-heart">
+          <%=post.likes.length%></i
+        >
+      </a>
+      <%}else{%>
+      <i style="color: red" class="fa-solid fa-heart"><%=post.likes.length%></i>
+      <% }%>
+    </small>
   </p>
 
   <div class="PostComments">

@@ -1,73 +1,75 @@
-#homeContainer{
-    display: flex;
-    #feed-posts{
-        width: 70%;
-        padding: 10px;
-    }
-    #user-friends{
-        width: 30%;
-        padding: 10px;
-        border-left: 1.5px solid lightgray;
-        height: 100vh;
-    }
+#homeContainer {
+  display: flex;
+  #feed-posts {
+    width: 70%;
+    padding: 10px;
+  }
+  #user-friends {
+    width: 30%;
+    padding: 10px;
+    border-left: 1.5px solid lightgray;
+    height: 100vh;
+  }
 }
-section{
-   
-    h4{
-
-        color: rgb(36, 0, 121);
+section {
+  h4 {
+    color: rgb(36, 0, 121);
+  }
+  form {
+    textarea {
+      align-self: center;
+      background-image: linear-gradient(
+        to right,
+        white,
+        rgb(235, 235, 250),
+        rgb(79, 250, 236)
+      );
+      border-bottom-right-radius: 20px;
+      border: none;
+      max-width: 60vw;
+      border-bottom: 3px solid cornflowerblue;
+      border-right: 2px solid rgb(0, 99, 99);
     }
-    form{
-
-        textarea{
-            align-self: center;
-            background-image: linear-gradient(to right, white, rgb(235, 235, 250), rgb(79, 250, 236));
-            border-bottom-right-radius: 20px;
-            border:none; 
-            border-bottom:3px solid cornflowerblue ;
-            border-right: 2px solid rgb(0, 99, 99);
-
-        }
-        input{
-            background-image: linear-gradient(to right, rgb(191, 22, 243),  rgb(241, 198, 252));
-            color: white;
-            border: 0px;
-            border-radius: 10px
-            
-        };
-        
-
+    input {
+      background-image: linear-gradient(
+        to right,
+        rgb(191, 22, 243),
+        rgb(241, 198, 252)
+      );
+      color: white;
+      border: 0px;
+      border-radius: 10px;
     }
-    div{
-        
-        
-        ul{
-            list-style-type: none;
-            li{
-                // display: inline-block;
-                p{
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
-                        height: auto;
-                        width: 40vw;
-                        background-image: linear-gradient(to right, rgb(160, 201, 218),  rgb(241, 198, 252));
-                    
-                    small{
-                        color: gray;
-                        a{
-                            i{
-                                color: rgb(40, 5, 73);
-                                right: 0;
-                                transform: translateX(36vw);
-                            }
-                        }
+  }
+  div {
+    ul {
+      list-style-type: none;
+      li {
+        // display: inline-block;
+        p {
+          display: flex;
+          // justify-content: flex-end;
+          flex-direction: column;
+          height: auto;
+          width: 40vw;
+          background-image: linear-gradient(
+            to right,
+            rgb(160, 201, 218),
+            rgb(241, 198, 252)
+          );
 
-                    }
-                }
+          small {
+            color: gray;
+            a {
+              i {
+                color: rgb(40, 5, 73);
+                right: 0;
+                transform: translateX(36vw);
+              }
             }
+          }
         }
-
+      }
     }
-
+  }
 }

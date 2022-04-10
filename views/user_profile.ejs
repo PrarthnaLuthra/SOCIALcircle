@@ -1,6 +1,12 @@
-<link rel="stylesheet" href="/css/signIn.css" />
+<link rel="stylesheet" href="<%=assetPath('css/signIn.css')%>"/>
+<link type="text/css" rel="stylesheet" href="<%=assetPath('css/user_profile.css')%>" />
 
-<img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+<img
+  class="avatar"
+  src="<%= user.avatar %>"
+  alt="<%= user.name %>"
+  width="100"
+/>
 
 <% if(user.id == profile_user.id){ %>
 <!-- if user matches then show the form -->

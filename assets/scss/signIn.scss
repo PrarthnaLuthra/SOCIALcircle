@@ -1,40 +1,69 @@
-h1{
-    text-align: center;
-    
+h1 {
+  text-align: center;
 }
 
-  
-   
-    form{
-        
-        display: flex;
-        flex-direction: column;
-        margin-left: 30vw;
-        border-radius: 20px;
-        width: 40vw;
-        background-image: linear-gradient(to right , blue ,pink);
-        justify-content: space-around;
-        
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30vw;
+  border-radius: 20px;
+  width: 40vw;
+  background-image: linear-gradient(
+    to right,
+    rgb(186, 83, 255),
+    rgb(71, 25, 158),
+    rgb(9, 0, 92)
+  );
+  justify-content: space-around;
 
-        input{
-            
-            margin: 20px;
-            border: 0vh;
-            margin: 20px;
-            height: 5vh;
+  input {
+    margin: 20px;
+    border: 0vh;
+    margin: 20px;
+    height: 5vh;
     border-radius: 5px;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(0, 255, 221);
+  }
+  button {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 5vh;
+    padding: 10px;
+    border: 0px;
+    border-radius: 8px;
+    font-weight: 600;
+    background-image: linear-gradient(
+      to left,
+      rgb(255, 221, 221),
+      rgb(15, 187, 187),
+      white
+    );
+  }
+  button:hover {
+    transition: ease-in-out;
+    transform: scale(1.08);
 
-        }
-        button{
-            width: 100px;
-            align-self: center;
-            margin-bottom: 5vh;
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 600;
-            background-image: linear-gradient(to left, rgb(33, 197, 197), rgb(15, 187, 130), white);
+    background-image: linear-gradient(
+      to left,
+      rgb(255, 221, 221),
+      rgba(184, 146, 219, 0.479),
+      rgb(255, 255, 255)
+    );
+  }
+}
+.googleAuth {
+  background-color: rgb(57, 55, 180);
+  color: white;
+  margin-left: 30vw;
+  border-radius: 20px;
+  width: 40vw;
+  text-align: center;
+  padding: 10px;
+  a {
+    font-size: 1.3rem;
+    padding: 4px;
+    text-decoration: none;
 
-
-        }
-    }
+    color: azure;
+  }
+}

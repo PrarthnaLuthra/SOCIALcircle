@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="/css/home.css" />
-
+<link type="text/css" rel="stylesheet" href="<%=assetPath('css/home.css')%>" />
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="<%=assetPath('css/chat_box.css')%>"
+/>
 <div id="homeContainer">
   <section id="feed-posts">
     <h4>Posts</h4>
@@ -32,6 +36,28 @@
 
     <%}%>
   </section>
+  <%- include('_chat_box')-%>
 </div>
+<script
+  type="text/javascript"
+  src="<%=assetPath('js/home_post_comments.js')%>"
+></script>
+<script
+  type="text/javascript"
+  src="<%=assetPath('js/home_posts.js')%>"
+></script>
+<script src="<%=assetPath('js/toggle_likes.js')%>"></script>
+<script>
+  $(".toggle-like-button").each(function () {
+    let self = this;
+    let toggleLike = new ToggleLike(self);
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 
-<script type="text/javascript" src="/js/home_posts.js"></script>
+<script src="<%=assetPath('js/chat_engine.js')%>"></script>
+<% if (locals.user){ %>
+<script>
+  new ChatEngine("user-chat-box", "<%= locals.user.email %>");
+</script>
+<% } %>

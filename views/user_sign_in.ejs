@@ -1,9 +1,11 @@
-<link rel="stylesheet" href="/css/signIn.css">
+<link type="text/css" rel="stylesheet" href="<%=assetPath('css/signIn.css')%>"/> />
 <h1>Sign In</h1>
 
 <form action="/users/create_session" method="POST">
-    <input type="email" name="email" placeholder="Enter your Email" required>
-    <input type="password" name="password" placeholder="password" required>
-    <button type="submit" >Sign In</button>
-
+  <input type="email" name="email" placeholder="Enter your Email" required />
+  <input type="password" name="password" placeholder="password" required />
+  <button type="submit">Sign In</button>
 </form>
+<p class="googleAuth">
+  <a href="/users/auth/google">Sign In/Sign Up using Google</a>
+</p>

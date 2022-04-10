@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
@@ -24,9 +25,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
+    <link type="text/css" rel="stylesheet" href="<%=assetPath('css/layout.css')%>" />
+    <link type="text/css" rel="stylesheet" href="<%=assetPath('css/header.css')%>" />
+    <link type="text/css" rel="stylesheet" href="<%=assetPath('css/footer.css')%>" />
     <%- style %>
   </head>
   <body>
@@ -37,28 +38,28 @@
 
     <%- include('_footer');%> <%- script %>
     <script>
-                  <% if(flash.success && flash.success.length>0){%>
+                        <% if(flash.success && flash.success.length>0){%>
 
-                    new Noty({
-                       theme: 'sunset',
-                       text: "<%= flash.success%>",
-                       type: 'success',
-                       layout: 'topRight',
-                       timeout:1500
-                    }).show();
+                          new Noty({
+                             theme: 'sunset',
+                             text: "<%= flash.success%>",
+                             type: 'success',
+                             layout: 'topRight',
+                             timeout:1500
+                          }).show();
 
-                  <%}%>
-<% if(flash.error && flash.error.length>0){%>
+                        <%}%>
+      <% if(flash.error && flash.error.length>0){%>
 
-      new Noty({
-         theme: 'sunset',
-         text: "<%= flash.error%>",
-         type: 'error',
-         layout: 'topRight',
-         timeout:1500
-      }).show();
+            new Noty({
+               theme: 'sunset',
+               text: "<%= flash.error%>",
+               type: 'error',
+               layout: 'topRight',
+               timeout:1500
+            }).show();
 
-      <%}%>
+            <%}%>
     </script>
   </body>
 </html>

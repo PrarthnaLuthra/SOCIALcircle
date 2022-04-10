@@ -1,4 +1,11 @@
-body{
-    color: rgb(19, 17, 17);
-    background-color: rgb(252, 248, 250);
+body {
+  color: rgb(19, 17, 17);
+  background-color: rgb(252, 248, 250);
+}
+img {
+  border-radius: 50%;
+//   width: 10vw;
+  border: 2px solid rgba(107, 24, 103, 0.315);
+  margin: 20px;
+  box-shadow: 5px 7px #00dbf87a;
 }
