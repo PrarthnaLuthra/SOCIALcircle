@@ -3,9 +3,9 @@ const sass = require("gulp-sass")(require("node-sass"));
 
 const cssnano = require("gulp-cssnano");
 const rev = require("gulp-rev");
-const uglify = require('gulp-uglify-es').default;
-const imagemin = require('gulp-imagemin');
-const del = require('del');
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const del = require("del");
 
 gulp.task("css", (done) => {
   console.log("Minifying CSS");
@@ -29,47 +29,54 @@ gulp.task("css", (done) => {
   done();
 });
 
-
-gulp.task('js', function(done){
-  console.log('minifying js...');
-   gulp.src('./assets/**/*.js')
-  .pipe(uglify())
-  .pipe(rev())
-  .pipe(gulp.dest('./public/assets'))
-  .pipe(rev.manifest({
-      cwd: 'public',
-      merge: true
-  }))
-  .pipe(gulp.dest('./public/assets'));
-  done()
-    console.log("Minified JS");
+gulp.task("js", function (done) {
+  console.log("minifying js...");
+  gulp
+    .src("./assets/**/*.js")
+    .pipe(uglify())
+    .pipe(rev())
+    .pipe(gulp.dest("./public/assets"))
+    .pipe(
+      rev.manifest({
+        cwd: "public",
+        merge: true,
+      })
+    )
+    .pipe(gulp.dest("./public/assets"));
+  done();
+  console.log("Minified JS");
 });
 
-
-gulp.task('images', function(done){
-    console.log('compressing images...');
-    gulp.src('./assets/**/*.+(png|jpg|gif|svg|jpeg)')
+gulp.task("images", function (done) {
+  console.log("compressing images...");
+  gulp
+    .src("./assets/**/*.+(png|jpg|gif|svg|jpeg)")
     .pipe(imagemin())
     .pipe(rev())
-    .pipe(gulp.dest('./public/assets'))
-    .pipe(rev.manifest({
-        cwd: 'public',
-        merge: true
-    }))
-    .pipe(gulp.dest('./public/assets'));
-    done();
-    console.log("Minified IMAGE");
+    .pipe(gulp.dest("./public/assets"))
+    .pipe(
+      rev.manifest({
+        cwd: "public",
+        merge: true,
+      })
+    )
+    .pipe(gulp.dest("./public/assets"));
+  done();
+  console.log("Minified IMAGE");
 });
-
 
 // empty the public/assets directory
-gulp.task('clean:assets', function(done){
-    del.sync(['./public/assets'], { force:true });
+gulp.task("clean:assets", function (done) {
+  del.sync(["./public/assets"], { force: true });
 
-    done();
+  done();
 });
 
-gulp.task('build', gulp.series('clean:assets', 'css', 'js', 'images'), function(done){
-    console.log('Building assets');
+gulp.task(
+  "build",
+  gulp.series("clean:assets", "css", "js", "images"),
+  function (done) {
+    console.log("Building assets");
     done();
-});
+  }
+);
