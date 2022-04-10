@@ -28,6 +28,8 @@ const chatSockets = require("./config/chat_sockets").chatSockets(chatServer);
 chatServer.listen(5000);
 console.log("chat server is listening on port 5000");
 const path = require("path");
+
+// SASS middleware
 if (env.name == "development") {
   app.use(
     sassMiddleware({
@@ -36,12 +38,15 @@ if (env.name == "development") {
       debug: true,
       outputStyle: "extended",
       prefix: "/css",
+      force: true,
     })
   );
 }
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParcer());
+
+// set up static file access (for CSS)
 app.use(express.static(env.asset_path));
 
 app.use(logger(env.morgan.mode, env.morgan.options));
